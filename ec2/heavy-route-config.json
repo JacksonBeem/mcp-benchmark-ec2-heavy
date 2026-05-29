@@ -1,44 +1,44 @@
 {
   "heavy": [
     {
-      "name": "biomcp",
-      "command": "node servers/biomcp/stdio-adapter.mjs"
+      "name": "mcp-server-nationalparks",
+      "command": "node servers/mcp-server-nationalparks/build/index.js"
     },
     {
-      "name": "dexpaprika-mcp",
-      "command": "node servers/dexpaprika-mcp/dist/index.js"
+      "name": "metmuseum-mcp",
+      "command": "node servers/metmuseum-mcp/dist/index.js"
     },
     {
-      "name": "mcp-google-map",
-      "command": "node servers/mcp-google-map/dist/cli.js --stdio"
+      "name": "hugeicons-mcp-server",
+      "command": "node servers/hugeicons-mcp-server/build/index.js"
     },
     {
-      "name": "nasa-mcp",
-      "command": "node servers/nasa-mcp/stdio-adapter.mjs"
-    },
-    {
-      "name": "mcp-nixos",
-      "command": "node servers/mcp-nixos/stdio-adapter.mjs"
+      "name": "openfda-mcp",
+      "command": "node servers/openfda-mcp/build/index.js"
     },
     {
       "name": "paper-search-mcp",
       "command": "node servers/paper-search-mcp/stdio-adapter.mjs"
     },
     {
-      "name": "scientific_computation_mcp",
-      "command": "node servers/scientific_computation_mcp/stdio-adapter.mjs"
+      "name": "openalex-mcp",
+      "command": "node servers/openalex-mcp/build/index.js"
     },
     {
-      "name": "medcalc",
-      "command": "node servers/medcalc/stdio-adapter.mjs"
+      "name": "pdf-reader-mcp",
+      "command": "node servers/_cand_npm/node_modules/@sylphx/pdf-reader-mcp/dist/index.js"
     },
     {
-      "name": "arxiv-mcp-server",
-      "command": "node servers/arxiv-mcp-server/stdio-adapter.mjs"
+      "name": "context7",
+      "command": "node servers/context7/dist/index.js"
     },
     {
-      "name": "huggingface-mcp-server",
-      "command": "node servers/huggingface-mcp-server/stdio-adapter.mjs"
+      "name": "json-query-mcp",
+      "command": "node servers/json-query-mcp/dist/index.js"
+    },
+    {
+      "name": "fetch-readable-mcp",
+      "command": "node servers/_cand_npm/node_modules/mcp-fetch-server/dist/index.js"
     }
   ]
 }
