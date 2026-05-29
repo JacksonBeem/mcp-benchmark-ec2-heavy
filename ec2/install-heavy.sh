@@ -11,7 +11,7 @@ cd "${SERVERS_DIR}"
 checkout_pinned_commit() {
   local name="$1"; local commit="$2"
   [ -z "$commit" ] && return
-  git -C "$name" rev-parse --is-inside-work-tree >/dev/null 2>&1 || return
+  git -C "$name" rev-parse --is-inside-work-tree >/dev/null 2>&1 || return 0
   local current; current="$(git -C "$name" rev-parse HEAD)"
   [ "$current" = "$commit" ] && return
   if [ -n "$(git -C "$name" status --porcelain)" ]; then
@@ -27,7 +27,7 @@ is_git_checkout() { git -C "$1" rev-parse --is-inside-work-tree >/dev/null 2>&1;
 sync_adapter() {
   local name="$1"
   local source_path="${ADAPTERS_DIR}/${name}/stdio-adapter.mjs"
-  [ -f "${source_path}" ] || return
+  [ -f "${source_path}" ] || return 0
   cp "${source_path}" "${SERVERS_DIR}/${name}/stdio-adapter.mjs"
   chmod +x "${SERVERS_DIR}/${name}/stdio-adapter.mjs" 2>/dev/null || true
   echo "INFO: synced adapter for ${name}"
