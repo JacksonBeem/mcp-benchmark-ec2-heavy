@@ -1,44 +1,44 @@
 {
   "heavy": [
     {
-      "name": "mcp-server-nationalparks",
-      "command": "node servers/mcp-server-nationalparks/build/index.js"
+      "name": "mcp-starwars",
+      "command": "node servers/mcp-starwars/stdio-adapter.mjs"
     },
     {
-      "name": "metmuseum-mcp",
-      "command": "node servers/metmuseum-mcp/dist/index.js"
-    },
-    {
-      "name": "hugeicons-mcp-server",
-      "command": "node servers/hugeicons-mcp-server/build/index.js"
-    },
-    {
-      "name": "openfda-mcp",
-      "command": "node servers/openfda-mcp/build/index.js"
-    },
-    {
-      "name": "paper-search-mcp",
-      "command": "node servers/paper-search-mcp/stdio-adapter.mjs"
-    },
-    {
-      "name": "openalex-mcp",
-      "command": "node servers/openalex-mcp/build/index.js"
-    },
-    {
-      "name": "pdf-reader-mcp",
-      "command": "node servers/_cand_npm/node_modules/@sylphx/pdf-reader-mcp/dist/index.js"
+      "name": "mcp-dnd-5e",
+      "command": "node servers/mcp-dnd-5e/stdio-adapter.mjs"
     },
     {
       "name": "context7",
       "command": "node servers/context7/dist/index.js"
     },
     {
+      "name": "pdf-reader-mcp",
+      "command": "node servers/_cand_npm/node_modules/@sylphx/pdf-reader-mcp/dist/index.js"
+    },
+    {
+      "name": "open-meteo-mcp-server",
+      "command": "node servers/open-meteo-mcp-server/dist/index.js"
+    },
+    {
+      "name": "whois-mcp",
+      "command": "node servers/whois-mcp/dist/index.js"
+    },
+    {
       "name": "json-query-mcp",
       "command": "node servers/json-query-mcp/dist/index.js"
     },
     {
-      "name": "fetch-readable-mcp",
-      "command": "node servers/_cand_npm/node_modules/mcp-fetch-server/dist/index.js"
+      "name": "ip-geolocation-mcp",
+      "command": "node servers/ip-geolocation-mcp/stdio-adapter.mjs"
+    },
+    {
+      "name": "calculator-mcp",
+      "command": "node servers/calculator-mcp/stdio-adapter.mjs"
+    },
+    {
+      "name": "paper-search-mcp",
+      "command": "node servers/paper-search-mcp/stdio-adapter.mjs"
     }
   ]
 }
