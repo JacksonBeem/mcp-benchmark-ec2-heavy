@@ -108,18 +108,19 @@ build_repo() {
 mkdir -p _cand_npm
 ( cd _cand_npm && [ -f package.json ] || npm init -y >/dev/null 2>&1 )
 ( cd _cand_npm && npm install --no-audit --no-fund @johnpapa/mcp-starwars@1.0.1 )
-( cd _cand_npm && npm install --no-audit --no-fund @sylphx/pdf-reader-mcp )
+( cd _cand_npm && npm install --no-audit --no-fund @sylphx/pdf-reader-mcp@2.4.2 )
+( cd _cand_npm && npm install --no-audit --no-fund open-meteo-mcp-server@1.6.1 )
+( cd _cand_npm && npm install --no-audit --no-fund @bharathvaj/whois-mcp@1.0.1 )
 ( cd _cand_npm && npm install --no-audit --no-fund mcp-ip-geolocator@1.0.0 )
+( cd _cand_npm && npm install --no-audit --no-fund @wrtnlabs/calculator-mcp@0.2.1 )
 mkdir -p "mcp-starwars" && sync_adapter "mcp-starwars"
 mkdir -p "ip-geolocation-mcp" && sync_adapter "ip-geolocation-mcp"
+mkdir -p "calculator-mcp" && sync_adapter "calculator-mcp"
 
 # clone + checkout pinned commit (+ sync vendored adapter)
 clone_repo "mcp-dnd-5e" "https://github.com/carromeu/mcp-dnd-5e" "506dfd904d0fcfe60569b5bfff295e98823c2cb3"
 clone_repo "context7" "https://github.com/upstash/context7" "5d7e893a5adf30f91183763ae8e65e9eaf8dd17e"
-clone_repo "open-meteo-mcp-server" "https://github.com/cmer81/open-meteo-mcp" "d1f0c7b9434d4253a7b40c83325c011d37b23a2d"
-clone_repo "whois-mcp" "https://github.com/bharathvaj-ganesan/whois-mcp" "da2023f1910bfcb98bd702a8e851860608a04a9c"
 clone_repo "json-query-mcp" "https://github.com/mgraczyk/json-query-mcp" "c3e58e723511b787daae475d9ad1a19774f6978b"
-clone_repo "calculator-mcp" "https://github.com/wrtnlabs/calculator-mcp" "b59604170c581a4fae6353078f726aca0c1e0373"
 clone_repo "paper-search-mcp" "https://github.com/openags/paper-search-mcp" "4860916c8da4e58b9cded756e0bc2327d334146d"
 
 # Ensure pnpm is on PATH for servers whose build lifecycle scripts call pnpm
@@ -133,10 +134,7 @@ fi
 # install node deps + build where a build script exists
 build_repo "mcp-dnd-5e"
 build_repo "context7"
-build_repo "open-meteo-mcp-server"
-build_repo "whois-mcp"
 build_repo "json-query-mcp"
-build_repo "calculator-mcp"
 build_repo "paper-search-mcp"
 
 if [ -d "json-query-mcp" ] && [ ! -f "json-query-mcp/big.json" ]; then

@@ -18,11 +18,11 @@
     },
     {
       "name": "open-meteo-mcp-server",
-      "command": "node servers/open-meteo-mcp-server/dist/index.js"
+      "command": "node servers/_cand_npm/node_modules/open-meteo-mcp-server/dist/index.js"
     },
     {
       "name": "whois-mcp",
-      "command": "node servers/whois-mcp/dist/index.js"
+      "command": "node servers/_cand_npm/node_modules/@bharathvaj/whois-mcp/dist/index.js"
     },
     {
       "name": "json-query-mcp",
