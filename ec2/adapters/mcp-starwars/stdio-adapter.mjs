@@ -12,6 +12,13 @@ import { dirname, join } from "node:path";
 
 console.log = console.error;
 
+// Upstream SWAPI (swapi.dev) currently serves an EXPIRED TLS cert, which makes every
+// tool return "API Error: certificate has expired". Accept it for THIS child process
+// only so the tools return real data. Scoped to the starwars process (read-only public
+// API); Node prints an insecure-TLS warning to stderr, which does not corrupt the
+// stdio JSON-RPC stream on stdout.
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+
 const here = dirname(fileURLToPath(import.meta.url));
 const entry = join(
   here,

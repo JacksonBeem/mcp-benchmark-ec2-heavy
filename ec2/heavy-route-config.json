@@ -33,8 +33,8 @@
       "command": "node servers/ip-geolocation-mcp/stdio-adapter.mjs"
     },
     {
-      "name": "calculator-mcp",
-      "command": "node servers/calculator-mcp/stdio-adapter.mjs"
+      "name": "fetch-readable-mcp",
+      "command": "node servers/_cand_npm/node_modules/mcp-fetch-server/dist/index.js"
     },
     {
       "name": "paper-search-mcp",
